@@ -17,10 +17,10 @@ jobs:
       issues: write 
 
     env:
-        ST_USERNAME: ${{ secrets.USERNAME }}
-        ST_USERNAME: ${{ secrets.PASSWORD }}
-        ST_USERNAME: ${{ secrets.BOT_USERNAME }}
-        ST_USERNAME: ${{ secrets.BOT_PASSWORD }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        BOT_USERNAME: ${{ secrets.BOT_USERNAME }}
+        BOT_PASSWORD: ${{ secrets.BOT_PASSWORD }}
 
     steps:
 
