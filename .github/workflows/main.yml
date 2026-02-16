@@ -80,8 +80,8 @@ jobs:
             Regards
             QA Automation Team 
 
-          to: murali.ambekar@perennialsys.com
-          cc:  
+          to: mayur.telke@perennialsys.com, murali.ambekar@perennialsys.com
+          cc: sanket.kedar@perennialsys.com, varsha.mane@perennialsys.com, nilesh@perennialsys.com,   
           from: ${{ secrets.BOT_USERNAME }}
           attachments:
 
