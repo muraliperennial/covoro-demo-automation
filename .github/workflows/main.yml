@@ -20,8 +20,8 @@ jobs:
       issues: write 
 
     env:
-        USERNAME: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+        DEMO_USERNAME: ${{ secrets.DEMO_USERNAME }}
+        DEMO_PASSWORD: ${{ secrets.DEMO_PASSWORD }}
         BOT_USERNAME: ${{ secrets.BOT_USERNAME }}
         BOT_PASSWORD: ${{ secrets.BOT_PASSWORD }}
 
@@ -40,6 +40,14 @@ jobs:
         id: parse
         if: ${{ always() }}
         run: node utilities/parse-report.js
+
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report # This is the name of the zip file on GitHub          
+          path: playwright-report/
+          retention-days: 2  
 
       - name: Send Email with HTML Reports
         if: ${{ always() }}
@@ -68,6 +76,9 @@ jobs:
             ${{ env.PASSED_LIST }}
             
             View full run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            Regards
+            QA Automation Team 
 
           to: murali.ambekar@perennialsys.com
           cc:  
