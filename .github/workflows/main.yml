@@ -75,7 +75,7 @@ jobs:
             Passed Test Titles:
             ${{ env.PASSED_LIST }}
             
-            View full run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            Download report here: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.upload-step.outputs.artifact-id }}
 
             Regards
             QA Automation Team 

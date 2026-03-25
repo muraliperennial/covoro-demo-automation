@@ -35,7 +35,8 @@ export class FinalSubmitInvoiceAlternate {
 
   /** Final submit: click on submit control (no Options dropdown). */
   async clickFinalSubmit() {
-    const finalSubmitBtn = this.page.locator('#submit-einv-1');
+    await this.page.getByRole('button',{ name:'Options'}).click()
+    const finalSubmitBtn = this.page.locator('#sub-item-submit');
     await expect(finalSubmitBtn).toBeVisible({ timeout: 60000 });
     await finalSubmitBtn.click();
   }

@@ -39,7 +39,7 @@ export class COVORO {
     await invoice.fillSellerVatIdentifier('102303340122203');
     await this.page.locator('//button[.//text()[normalize-space()="Save"]]').click();
     await invoice.selectBuyer('Desai Brothers');
-    await invoice.addItem();
+    await invoice.addItem('BothType');
     await this.page.locator('//button[.//text()[normalize-space()="Save"]]').click();
     await invoice.selectPaymentMeans();
     await invoice.selectTodayDate();

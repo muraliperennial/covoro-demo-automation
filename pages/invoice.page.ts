@@ -231,7 +231,7 @@ await this.page.locator('//button[.//text()[normalize-space()="Save"]]').click()
     await this.page.locator('xpath=/html/body/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/button[4]').click();
   }
 
-  async addItem(itemDescription: string = 'ABC Revise') {
+  async addItem(itemDescription: string) {
     await this.page.getByRole('button', { name: /add item/i }).click();
     await this.page.fill('#itemDescription', itemDescription);
     await this.page.waitForTimeout(500);
